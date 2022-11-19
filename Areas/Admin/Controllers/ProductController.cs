@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OnlineShop.Data;
@@ -7,7 +8,8 @@ using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace OnlineShop.Areas.Admin.Controllers
 {
-    [Area("Admin")] 
+    [Area("Admin")]
+    [Authorize]
     public class ProductController : Controller
     {
         ApplicationDbContext _db;

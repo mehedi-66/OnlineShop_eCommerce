@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.Data;
 using OnlineShop.Models;
@@ -6,6 +7,7 @@ using OnlineShop.Models;
 namespace OnlineShop.Areas.Customer.Controllers
 {
     [Area("Customer")]
+    [Authorize]
     public class UserController : Controller
     {
 

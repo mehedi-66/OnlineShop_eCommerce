@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<br />
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info">Rolees</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-action="Create" class="btn btn-info">New Role</a>
+    </div>
+
+</div>
+<br />
+<div>
+    <table class="table table-striped border">
+        <tr class="table-info">
+            <th>
+                Name
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+        @foreach (var item in ViewBag.Roles)
+        {
+            <tr>
+                 <td>@item.Name</td>
+                <td>
+                    @{
+                        string[] arr = new string[2];
+                        arr[0] = "Role";
+                        arr[1] = item.Id + "";
+                    }
+                    <partial name="_ButtonPartial" model="@arr" />
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

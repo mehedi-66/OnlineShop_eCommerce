@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Assing User Role";
+}
+
+<br />
+<br />
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info">Assign User Role</h2>
+    </div>
+    @*<div class="col-6 text-right">
+        <a asp-action="Create" class="btn btn-info">New Role</a>
+    </div>*@
+
+</div>
+<br />
+<div>
+    <table class="table table-striped border">
+        <tr class="table-info">
+            <th>
+               User Name
+            </th>
+            <th>Role Name</th>
+            <th></th>
+        </tr>
+        @foreach (var item in ViewBag.UserRoles)
+        {
+            <tr>
+                <td>@item.UserName</td>
+              @*  <td>
+                    @{
+                        string[] arr = new string[2];
+                        arr[0] = "Role";
+                        arr[1] = item.Id + "";
+                    }
+                    <partial name="_ButtonPartial" model="@arr" />
+                </td>*@
+                <td>@item.RoleName</td>
+            </tr>
+        }
+
+    </table>
+</div>

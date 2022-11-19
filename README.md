@@ -1,0 +1,2 @@
+<h3>Online Shop eCommerce Project</h3>
+<p>User can see product add to cart and Order.</br>Admin can add new Product and All access for modification</br>Authentication and Role Based Authorisations in this Application.</br>Tech: C#, ASP.NET Core MVC,Identity framework, Microsoft SQL Server, Bootstrap</p>
